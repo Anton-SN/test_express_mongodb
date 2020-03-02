@@ -1,0 +1,45 @@
+  <nav class="blue darken-4">
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo right">Test</a>
+      <ul id="nav-mobile" class="hide-on-med-and-down">
+        
+        {{#if isUser}}
+        <li class="active"><a href="/">User</a></li>
+        {{else}}
+        <li><a href="/">User</a></li>
+        {{/if}}
+
+        {{#if isSignUp}}
+        <li class="active"><a href="/signup">Sign Up</a></li>
+        {{else}}
+        <li><a href="/signup">Sign Up</a></li>
+        {{/if}}
+
+        {{#if isLogin}}
+        <li class="active"><a href="/login">Login</a></li>
+        {{else}}
+        <li><a href="/login">Login</a></li>
+        {{/if}}
+
+        {{#if isLogout}}
+        <li class="active"><a href="/logout">Logout</a></li>
+        {{else}}
+        <li><a href="/logout">Logout</a></li>
+        {{/if}}
+
+        {{#if isOrder}}
+        <li class="active"><a href="/order">Order</a></li>
+        {{else}}
+        <li><a href="/order">Order</a></li>
+        {{/if}}
+
+        {{#if isList}}
+        <li class="active"><a href="/list">Order List</a></li>
+        {{else}}
+        <li><a href="/list">Order List</a></li>
+        {{/if}}
+
+
+      </ul>
+    </div>
+  </nav>

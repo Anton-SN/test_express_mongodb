@@ -1,0 +1,11 @@
+<h1>User {{name}}</h1>
+
+{{#if name}}
+<h2>Вы авторизованы</h2>
+<p>First Name: {{name}}</p>
+<p>Last Name: {{lastName}}</p>
+<p>email: {{email}}</p>
+<p>Orders Length: {{orders}}</p>
+{{else}}
+<h2>Авторизуйтесь!</h2>
+{{/if}}

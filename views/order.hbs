@@ -1,0 +1,28 @@
+{{#if isAuth}}
+<form action="/order" method="POST">
+  <h2>Create Order</h2>
+
+  <div class="input-field">
+    <h4>Registration form</h4>
+    <p>Service Name</p>
+    <input type="text" name="serviceName" placeholder="Service Name">
+    <p>Target Url</p>
+    <input type="text" name="targetUrl" placeholder="Target Url">
+    <p>Price</p>
+    <input type="number" name="price" placeholder="Email">
+    <p>Action Name</p>
+    <input type="text" name="actionName" placeholder="Action Name">
+    <p>Count</p>
+    <input type="number" name="count" placeholder="Count">
+  </div>
+
+  {{#if add}}
+  <h4>Add order</h4>
+  {{/if}}
+  <button type="submit" class="btn"><a style="color:white" href="/">Main</a></button>
+  <button type="submit" class="btn">Create</button>
+</form>
+{{else}}
+<h2>User not authorized</h2>
+<button type="submit" class="btn"><a style="color:white" href="/">Main</a></button>
+{{/if}}

@@ -1,0 +1,23 @@
+{{#if isAuth}}
+<h2>Order List</h2>
+{{#if order.length}}
+
+<ul>
+  {{#each order}}
+ <li class="order">
+    <span>Service Name: {{serviceName}}</span>
+    <span>Price: {{price}}</span>
+    <span>Service Actions: {{serviceActions.0.actionName}}</span>
+    <span>Count: {{serviceActions.0.count}}</span>
+    <hr/>
+  </li>
+  {{/each}}
+</ul>
+<button type="submit" class="btn"><a style="color:white" href="/">Main</a></button>
+{{else}}
+<p>No orders!</p>
+{{/if}}
+{{else}}
+<h2>User not authorized</h2>
+<button type="submit" class="btn"><a style="color:white" href="/">Main</a></button>
+{{/if}}
