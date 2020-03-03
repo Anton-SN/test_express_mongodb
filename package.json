@@ -6,8 +6,8 @@
   "author": "Anton Sivagin <ansn.onward@gmail.com>",
   "license": "MIT",
   "engines": {
-    "node": ">=12.5.0",
-    "npm": ">=6.9.0"
+    "node": "^12.5.0",
+    "npm": "^6.9.0"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
