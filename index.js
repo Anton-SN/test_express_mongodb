@@ -7,6 +7,7 @@ const session = require('express-session')
 const MongoStore = require('connect-mongo')(session)
 
 const PORT = process.env.PORT || 3000;
+const URL = 'mongodb+srv://Anton:123@cluster0-552qs.mongodb.net/test?retryWrites=true&w=majority'
 
 const app = express();
 const hbs = exphbs.create({
@@ -26,7 +27,7 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
     store: new MongoStore({
-        url: 'mongodb+srv://Anton:123@cluster0-552qs.mongodb.net/test'
+        url: URL
     })
 }))
 
@@ -34,7 +35,7 @@ app.use(router)
 
 async function start() {
     try {
-        await mongoose.connect('mongodb+srv://Anton:123@cluster0-552qs.mongodb.net/test', {
+        await mongoose.connect(URL, {
             useNewUrlParser: true,
             useFindAndModify: false
         })
