@@ -56,7 +56,7 @@
     }
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "npm install && node index.js"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
