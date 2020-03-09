@@ -8,7 +8,7 @@ const MongoStore = require('connect-mongo')(session)
 
 const PORT = process.env.PORT || 3000;
 const URL = 'mongodb+srv://Anton:123@cluster0-552qs.mongodb.net/test?retryWrites=true&w=majority'
-
+console.log(process.env)
 const app = express();
 const hbs = exphbs.create({
     defaultLayout: 'main',
